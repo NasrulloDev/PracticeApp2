@@ -27,9 +27,11 @@ struct ContentView: View {
         
         do{
             let (data, _) = try await URLSession.shared.data(from: url)
-            if let decodedUsers = try? JSONDecoder().decode([User].self, from: data){
+            let decoder = JSONDecoder()
+            decoder.dateDecodingStrategy = .iso8601
+            if let decodedUsers = try? decoder.decode([User].self, from: data){
                 usersList = decodedUsers
-                print("decoded")
+                print(decodedUsers[0].registered)
             }
 
         }catch{
