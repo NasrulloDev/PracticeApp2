@@ -4,7 +4,7 @@
 //
 //  Created by Насрулло Исмоилжонов on 25/02/24.
 //
-
+import SwiftData
 import SwiftUI
 
 @main
@@ -13,5 +13,6 @@ struct PracticeApp2App: App {
         WindowGroup {
             ContentView()
         }
+        .modelContainer(for: User.self)
     }
 }
