@@ -8,7 +8,6 @@ import SwiftData
 import SwiftUI
 
 struct ContentView: View {
-    @Environment(\.modelContext) var modelContext
     @State private var usersList: [User] = []
     
     var body: some View {
