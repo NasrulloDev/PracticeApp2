@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct DetailView: View {
     @State var user: User
@@ -13,7 +14,7 @@ struct DetailView: View {
     var body: some View {
         VStack{
             Text(user.about)
-            List(user.friends, id: \.id){ friend in
+            List(user.friends!, id: \.id){ friend in
                 Text(friend.name)
             }
         }
@@ -21,5 +22,12 @@ struct DetailView: View {
 }
 
 #Preview {
-    DetailView(user: User(id: "12", isActive: true, name: "", age: 20, company: "", email: "", address: "", about: "bla", registered: .now, tags: [], friends: []))
+    do{
+        let config = ModelConfiguration(isStoredInMemoryOnly: true)
+        let container = try ModelContainer(for: User.self, configurations: config)
+        return DetailView(user: User(id: "", isActive: true, name: "", age: 0, company: "", email: "", address: "", about: "", registered: .now, tags: [], friends: []))
+            .modelContainer(container)
+    }catch{
+        return Text("Failed to build preview \(error.localizedDescription)")
+    }
 }

@@ -19,6 +19,11 @@ class Friend: Codable {
     var id: String
     var name: String
     
+    init(id: String, name: String) {
+        self.id = id
+        self.name = name
+    }
+    
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.id = try container.decode(String.self, forKey: .id)

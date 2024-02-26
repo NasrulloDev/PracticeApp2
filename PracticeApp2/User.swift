@@ -10,7 +10,7 @@ import SwiftData
 @Model
 class User: Codable {
     
-    enum CodingKeys:String, CodingKey{
+    enum CodingKeys: String, CodingKey{
         case id = "id"
         case isActive = "isActive"
         case name = "name"
@@ -35,6 +35,20 @@ class User: Codable {
     var registered: Date
     var tags: [String]
     var friends: [Friend]
+    
+    init(id: String, isActive: Bool, name: String, age: Int, company: String, email: String, address: String, about: String, registered: Date, tags: [String], friends: [Friend]) {
+        self.id = id
+        self.isActive = isActive
+        self.name = name
+        self.age = age
+        self.company = company
+        self.email = email
+        self.address = address
+        self.about = about
+        self.registered = registered
+        self.tags = tags
+        self.friends = friends
+    }
     
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)

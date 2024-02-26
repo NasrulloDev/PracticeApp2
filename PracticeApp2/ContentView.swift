@@ -4,10 +4,11 @@
 //
 //  Created by Насрулло Исмоилжонов on 25/02/24.
 //
-
+import SwiftData
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(\.modelContext) var modelContext
     @State private var usersList: [User] = []
     
     var body: some View {
