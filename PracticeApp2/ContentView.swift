@@ -11,11 +11,25 @@ struct ContentView: View {
     @State private var usersList: [User] = []
     
     var body: some View {
-        List(usersList, id: \.id){user in
-            Text(user.name)
-        }
-        .task {
-            await loadData()
+        NavigationStack{
+            List(usersList, id: \.id){user in
+                HStack{
+                    NavigationLink{
+                        DetailView(user: user)
+                    }label: {
+                        VStack(alignment: .leading){
+                            Text(user.name)
+                                .font(.headline)
+                            Text(user.company)
+                        }
+                    }
+                }
+            }
+            .task {
+                await loadData()
+            }
+            .navigationTitle("Users")
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
     
@@ -31,7 +45,6 @@ struct ContentView: View {
             decoder.dateDecodingStrategy = .iso8601
             if let decodedUsers = try? decoder.decode([User].self, from: data){
                 usersList = decodedUsers
-                print(decodedUsers[0].registered)
             }
 
         }catch{

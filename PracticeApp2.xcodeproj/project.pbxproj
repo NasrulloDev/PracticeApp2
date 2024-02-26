@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2898CE762B8CA5E900E934A5 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2898CE752B8CA5E900E934A5 /* DetailView.swift */; };
 		28BC5B292B8B3DDB009A3603 /* PracticeApp2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BC5B282B8B3DDB009A3603 /* PracticeApp2App.swift */; };
 		28BC5B2B2B8B3DDB009A3603 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BC5B2A2B8B3DDB009A3603 /* ContentView.swift */; };
 		28BC5B2D2B8B3DDE009A3603 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28BC5B2C2B8B3DDE009A3603 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2898CE752B8CA5E900E934A5 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		28BC5B252B8B3DDB009A3603 /* PracticeApp2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PracticeApp2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28BC5B282B8B3DDB009A3603 /* PracticeApp2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeApp2App.swift; sourceTree = "<group>"; };
 		28BC5B2A2B8B3DDB009A3603 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 			children = (
 				28BC5B282B8B3DDB009A3603 /* PracticeApp2App.swift */,
 				28BC5B2A2B8B3DDB009A3603 /* ContentView.swift */,
+				2898CE752B8CA5E900E934A5 /* DetailView.swift */,
 				28BC5B362B8B3E45009A3603 /* User.swift */,
 				28BC5B382B8B3F64009A3603 /* Friend.swift */,
 				28BC5B2C2B8B3DDE009A3603 /* Assets.xcassets */,
@@ -146,6 +149,7 @@
 				28BC5B2B2B8B3DDB009A3603 /* ContentView.swift in Sources */,
 				28BC5B292B8B3DDB009A3603 /* PracticeApp2App.swift in Sources */,
 				28BC5B372B8B3E45009A3603 /* User.swift in Sources */,
+				2898CE762B8CA5E900E934A5 /* DetailView.swift in Sources */,
 				28BC5B392B8B3F64009A3603 /* Friend.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
